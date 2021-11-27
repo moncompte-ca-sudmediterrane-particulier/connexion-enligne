@@ -1,0 +1,269 @@
+<?php
+session_start();
+if(@$_SESSION["autoriser"]!="oui"){
+header("location:index.php");
+exit();
+}
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Credit Agricole mon compte en ligne</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	  
+	  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+		
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src='https://kit.fontawesome.com/618007f65e.js' crossorigin='anonymous'></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="Style1.css"/>
+
+<script type="text/javascript" src="Java.js"></script>
+	</head>
+	<body onload="alert()">
+	<div id="sideNavigation" class="sidenav">
+	
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color:#fff;text-align:center;top: -10px;">&times;</a>
+
+<div class="profil">
+ <img src="https://www.pricebank.fr/uploads/banques/logos/vignettes/center/big/80.png" id="logoca"/>
+  
+</div>
+<br />
+<section>
+<p>Coté claudine</p>
+ <a style="padding:0;margin:0;text-decoration:none;" href="Deco.php"><button class="logout">SE DÉCONNECTER</button></a>
+</section>
+  <br />
+  <a onclick="alert()" href="#">Ma banque et moi</a>
+  <hr style="background-color:#1f94a6">
+  <a onclick="alert()" href="#">Mes infos personnel</a>
+  <hr style="background-color:#1f94a6">
+  <a onclick="alert()" href="#">Mes parametre</a>
+  <hr style="background-color:#1f94a6">
+  <a onclick="alert()" href="#">Mes projets</a>
+  <hr style="background-color:#1f94a6">
+  <a onclick="alert()" href="#">Mes avantages</a><hr style="background-color:#1f94a6">
+ 
+</div>
+ 
+<nav class="topnav">
+  <a onclick="openNav()">
+	<svg width="30" height="30" id="icoOpen">
+		<path d="M0,5 30,5" stroke="#000" stroke-width="2"/>
+		<path d="M0,14 30,14" stroke="#000" stroke-width="2"/>
+		<path d="M0,23 30,23" stroke="#000" stroke-width="2"/>
+	</svg>
+  </a>
+  
+  <img src="https://www.pricebank.fr/uploads/banques/logos/vignettes/center/big/80.png" id="logoca"/>
+  
+  
+</nav>
+ <script>
+function openNav() {
+	document.getElementById("sideNavigation").style.width = "100%";
+	/*document.getElementById("main").style.marginLeft = "250px";*/
+}
+ 
+function closeNav() {
+	document.getElementById("sideNavigation").style.width = "0";
+	/*document.getElementById("main").style.marginLeft = "0";*/
+}
+</script>
+
+<br />
+<br />
+<br />
+<p style="font-family:sans-serif;font-weight:700;padding:5px;">Bonjour</p>
+<p style="font-family:sans-serif;font-weight:700;padding:5px;line-height:1px;">Mlle COTÉ CLAUDINE</p>
+
+<p style="color:gray;font-family:arial;padding:5px">derniere connexion au <b class="date" style="font-family:sans-serif;font-size:10px;color:gray;"></b></p>
+
+<h3 style="font-family:sans-serif;" >MON COMPTE PRINCIPAL</h3>
+
+
+<div id="main">
+
+
+<div class="left">
+
+<p>Mlle COTÉ CLAUDINE</p>
+<sub><p>COMPTE DE DEPOT N°627828</p></sub>
+
+
+
+<p style="font-size:30px;"><span style=";font-size:40px;padding:10px" class="material-icons-outlined">light_mode</span><!-- <i class="fa fa-sun-o" style="font-size:30px;color:#fff"></i> -->834.357.00 €</p>
+
+<p style="width:100%;border-radius:2px;padding:10px;color:#fff">statut du compte : <i class="blink">
+	Votre Compte Est Bloquée
+	</i></p>
+
+
+	<br>
+	<marquee><p style="font-size:15px;padding:3%;">Frais de deblocage: <b style="color:red;">85.000,00€</b></p></marquee>
+</div>
+
+<div class="right">
+
+<!--<p style="font-size:20px; ">1 000 000€</p>
+<sub><p style="color:gray">À venir:<b style="color:red">-1000€</b></p></sub>-->
+
+</div>
+</div>
+
+<div class="story">
+
+<table class="table">
+  <thead>
+	<!--<tr>
+	  <th scope="col">#</th>
+	  <th scope="col">First</th>
+	  <th scope="col">Last</th>
+	  <th scope="col">Handle</th>
+	</tr>
+  </thead>-->
+  <tbody>
+	<tr>
+	  <th scope="row" style="color:#347780">08/20</th>
+	  <td>VIREMENT EN VOTRE FAVEUR vivrement...</td>
+	  <td colspan="2" style="color:#347780;font-weight:700;">500€</td>
+	</tr>
+	<tr>
+	  <th scope="row" style="color:#347780">10/20</th>
+	  <td>VIREMENT EN VOTRE FAVEUR VIREMENT...</td>
+	  <td colspan="2" style="color:#347780">500€</td>
+	  
+	</tr>
+	<tr>
+	  <th scope="row" style="color:#347780">27/21</th>
+	  <td colspan="2">PRELEVEMENT ALIANZ VIE ALIANZ VIE</td>
+	  <td>-178€</td>
+	</tr>
+  </tbody>
+</table>
+
+</div>
+
+<h3 style="font-family:sans-serif;" >MON EPARGNES DISPONIBLE</h3>
+
+
+<div class="livret">
+
+<p style="color:#347780;font-weight:900">Mlle COTÉ CLAUDINE</p>
+<!--<i class="fa fa-sun-o" style="font-size:30px;color:yellow;width:10%"></i>-->
+
+<p class="6"><b>Livret A </b style="color:gray;">n°72836273838</p>
+
+<p style="color:#3d878f;">2.43€</p>
+
+</div>
+<h3 style="font-family:sans-serif;" >MES PLACEMENTS</h3>
+
+<nav style="width:90%;margin:auto;background-color:lightblue;" class="navbar navbar-light">
+  <a class="navbar-brand" href="#">Afficher mes 7 placements</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+	<ul class="navbar-nav">
+	<br />
+	  <li class="nav-item active">
+		<a class="nav-link" href="#"><p>DÉPOT A TERMES <sub style="color:gray;">n°617262826</sub></p><p>0.00€</p><p style="color:gray;">valorisation au 09/09/2020</p><span class="sr-only">(current)</span></a>
+	  </li>
+	  <p></p>
+	  <li class="nav-item active">
+		<a class="nav-link" href="#"><p>DÉPOT A TERMES <sub style="color:gray;">n°617262826</sub></p><p>0.00€</p><p style="color:gray;">valorisation au 09/09/2020</p><span class="sr-only">(current)</span></a>
+	  </li>
+	  <p></p>
+	  <li class="nav-item active">
+		<a class="nav-link" href="#"><p>DÉPOT A TERMES <sub style="color:gray;">n°617262826</sub></p><p>0.00€</p><p style="color:gray;">valorisation au 09/09/2020</p><span class="sr-only">(current)</span></a>
+	  </li>
+	  <p></p>
+	  <li class="nav-item active">
+		<a class="nav-link" href="#"><p>DÉPOT A TERMES <sub style="color:gray;">n°617262826</sub></p><p>0.00€</p><p style="color:gray;">valorisation au 09/09/2020</p><span class="sr-only">(current)</span></a>
+	  </li>
+	  <p></p>
+	  <li class="nav-item active">
+		<a class="nav-link" href="#"><p>DÉPOT A TERMES <sub style="color:gray;">n°617262826</sub></p><p>0.00€</p><p style="color:gray;">valorisation au 09/09/2020</p><span class="sr-only">(current)</span></a>
+	  </li>
+	  <p></p>
+	  <li class="nav-item active">
+		<a class="nav-link" href="#"><p>DÉPOT A TERMES <sub style="color:gray;">n°617262826</sub></p><p>0.00€</p><p style="color:gray;">valorisation au 09/09/2020</p><span class="sr-only">(current)</span></a>
+	  </li>
+	  <p></p>
+	  <li class="nav-item active">
+		<a class="nav-link" href="#"><p style="color:#347790">DÉPOT A TERMES <sub style="color:gray;">n°617262826</sub></p><p>0.00€</p><p style="color:gray;">valorisation au 09/09/2020</p><span class="sr-only">(current)</span></a>
+	  </li>
+	</ul>
+  </div>
+</nav>
+
+<h3 style="font-family:sans-serif;" >MES ASSURANCES</h3>
+
+<nav style="width:90%;margin:auto;background-color:lightblue;" class="navbar navbar-light">
+  <a class="navbar-brand" href="#">Afficher mon assurance</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+	<ul class="navbar-nav mr-auto">
+	
+	  <li class="nav-item active">
+		<a class="nav-link" href="#"><p style="color:#347780">Mlle COTÉ CLAUDINE</p><p style="color:#ffffff;font-weight:400;">INITIAL VALEUR PREVOYANCE</p><p style="color:#ffffff;font-weight:400;">Capital garanti : 8000€</p><span class="sr-only">(current)</span></a>
+	  </li>
+	  
+	</ul>
+	<!--<span class="navbar-text">
+	  Navbar text with an inline element
+	</span>-->
+  </div>
+</nav>
+<h3 style="font-family:sans-serif;" >MES CRÉDITS</h3>
+
+<div class="credit">
+
+<i class='fas fa-chart-pie' style='font-size:20px;color:#347780'></i>
+
+<p></p>
+
+<p>Vous n'avez pas de credit</p><p>actuellement</p>
+</div>
+<br />
+<br />
+<br />
+<footer>
+
+<div class="social">
+<i class="fa fa-facebook" style="font-size:20px;color:#fff"></i><i class="fa fa-twitter" style="font-size:20px;color:#fff"></i><i class="fa fa-youtube-play" style="font-size:20px;color:#fff"></i><i class="fa fa-linkedin" style="font-size:20px;color:#fff"></i><i class="fa fa-instagram" style="font-size:20px;color:#fff"></i>
+</div>
+
+<div class="agir">
+<img style="width:40%;"src="https://i.ibb.co/5Lb7ZJX/6-D597-B5-B-6-BDB-4-F3-F-B808-0-CC1-DA37-D661-removebg-preview.png"/>
+<hr style="background-color:#5c5c66">
+<p>LE CREDIT AGRICOLE</p><hr style="background-color:#5c5c66">
+<p>RELATION BANQUE CLIENT</p><hr style="background-color:#5c5c66">
+<p>SITES SPECIALISES</p><hr style="background-color:#5c5c66">
+<p>Accessibilité numerique du site</p><hr style="background-color:#5c5c66">
+</div>
+</footer>
+<br />
+<br />
+<div class="menudown">
+  <a href="#home" onclick="alert()"><i class='fas fa-money-check' style='font-size:12px;color:#fff'></i><br />EDITER UN <br/>RIB</a>
+  <a href="#news" onclick="alert()"><i class='far fa-credit-card' style='font-size:12px;color:#fff'></i><br/>GERER <br/>MA CARTE</a>
+  </div>
+	</body>
+</html>
