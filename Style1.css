@@ -182,7 +182,7 @@ h1{
 }
 
 .profil img{
-	width: 60%;
+	width: 65%;
 }
 
 .left{
@@ -239,9 +239,9 @@ color: green;
 	font-size: 13px;
 }
 
-#logoca{
-    width: 150px;
-}
+/*#logoca{
+    width: 400px;
+}*/
 
 
 
@@ -394,6 +394,9 @@ section p{
 
 
 
+img{
+width:65%;
+}
 
 
 
