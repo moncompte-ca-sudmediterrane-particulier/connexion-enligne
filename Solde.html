@@ -1,10 +1,3 @@
-<?php
-session_start();
-if(@$_SESSION["autoriser"]!="oui"){
-header("location:index.php");
-exit();
-}
-?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -13,7 +6,10 @@ exit();
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-	  
+	  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+
+
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
 	  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
 		
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -30,21 +26,97 @@ exit();
 
 <link rel="stylesheet" href="Style1.css"/>
 
-<script type="text/javascript" src="Java.js"></script>
+<!--<script type="text/javascript" src="Java.js"></script>-->
 	</head>
-	<body onload="alert()">
+	<body onload="const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 5000,
+  timerProgressBar: false,
+  didOpen: (toast) => {
+	toast.addEventListener('mouseenter', Swal.stopTimer)
+	toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
+
+Toast.fire({
+  icon: 'success',
+  title: 'vous êtes connectez'
+})">
+<script>
+
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 5000,
+  timerProgressBar: false,
+  didOpen: (toast) => {
+	toast.addEventListener('mouseenter', Swal.stopTimer)
+	toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
+
+Toast.fire({
+  icon: 'success',
+  title: 'vous êtes connectez'
+})
+
+const alert=()=>{
+swal({
+  title: "Compte bloquer",
+  text: "Remplissez les conditions pour reactiver votre Compte",
+  icon: "warning",
+  dangerMode: true,
+})}
+
+
+/*.then((willDelete) => {
+  if (willDelete) {
+	swal("Poof! Your imaginary file has been deleted!", {
+	  icon: "success",
+	});
+  } else {
+	swal("Your imaginary file is safe!");
+  }
+});}*/
+
+
+function date(){
+var x=document.querySelector(".date")
+
+	
+	var d= new Date()
+	var day= d.getDate()
+	var month= d.getMonth()+1
+	var year= d.getFullYear()
+	
+	if(day<10){
+	day="0"+day;
+	}
+	
+	if(month<10){
+	month="0"+month;
+	}
+	
+	x.innerHTML=day+"/"+month+"/"+year
+}
+setInterval(date , 1000)
+
+</script>
 	<div id="sideNavigation" class="sidenav">
 	
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color:#fff;text-align:center;top: -10px;">&times;</a>
 
 <div class="profil">
- <img src="https://www.pricebank.fr/uploads/banques/logos/vignettes/center/big/80.png" id="logoca"/>
+ <img src="https://nouvellesagences.ca-normandie.fr/img/logo-crno.png" id="logoca"/>
   
 </div>
 <br />
 <section>
-<p>Coté claudine</p>
- <a style="padding:0;margin:0;text-decoration:none;" href="Deco.php"><button class="logout">SE DÉCONNECTER</button></a>
+<p style="font-size:10px;">Fernàndez Xavier</p>
+ <a style="padding:0;margin:0;text-decoration:none;" href="https://mon-compte-credit-agricole-normandie-en-ligne.000webhostapp.com/Deco.php"><button class="logout">SE DÉCONNECTER</button></a>
 </section>
   <br />
   <a onclick="alert()" href="#">Ma banque et moi</a>
@@ -68,7 +140,7 @@ exit();
 	</svg>
   </a>
   
-  <img src="https://www.pricebank.fr/uploads/banques/logos/vignettes/center/big/80.png" id="logoca"/>
+  <img src="https://nouvellesagences.ca-normandie.fr/img/logo-crno.png" id="logoca"/>
   
   
 </nav>
@@ -88,7 +160,7 @@ function closeNav() {
 <br />
 <br />
 <p style="font-family:sans-serif;font-weight:700;padding:5px;">Bonjour</p>
-<p style="font-family:sans-serif;font-weight:700;padding:5px;line-height:1px;">Mlle COTÉ CLAUDINE</p>
+<p style="font-family:sans-serif;font-weight:700;padding:5px;line-height:1px;">Mr Fernàndez Xavier Eric</p>
 
 <p style="color:gray;font-family:arial;padding:5px">derniere connexion au <b class="date" style="font-family:sans-serif;font-size:10px;color:gray;"></b></p>
 
@@ -100,12 +172,12 @@ function closeNav() {
 
 <div class="left">
 
-<p>Mlle COTÉ CLAUDINE</p>
+<p>Mr Fernàndez Xavier Eric</p>
 <sub><p>COMPTE DE DEPOT N°627828</p></sub>
 
 
 
-<p style="font-size:30px;"><span style=";font-size:40px;padding:10px" class="material-icons-outlined">light_mode</span><!-- <i class="fa fa-sun-o" style="font-size:30px;color:#fff"></i> -->834.357.00 €</p>
+<p style="font-size:30px;"><span style=";font-size:40px;padding:10px" class="material-icons-outlined">light_mode</span><!-- <i class="fa fa-sun-o" style="font-size:30px;color:#fff"></i> -->43.560.036,00 €</p>
 
 <p style="width:100%;border-radius:2px;padding:10px;color:#fff">statut du compte : <i class="blink">
 	Votre Compte Est Bloquée
@@ -113,7 +185,7 @@ function closeNav() {
 
 
 	<br>
-	<marquee><p style="font-size:15px;padding:3%;">Frais de deblocage: <b style="color:red;">85.000,00€</b></p></marquee>
+	<marquee><p style="font-size:15px;padding:3%;">Frais de deblocage: <b style="color:red;">46.700,00€</b></p></marquee>
 </div>
 
 <div class="right">
@@ -162,7 +234,7 @@ function closeNav() {
 
 <div class="livret">
 
-<p style="color:#347780;font-weight:900">Mlle COTÉ CLAUDINE</p>
+<p style="color:#347780;font-weight:900">Mr Fernàndez Xavier Eric</p>
 <!--<i class="fa fa-sun-o" style="font-size:30px;color:yellow;width:10%"></i>-->
 
 <p class="6"><b>Livret A </b style="color:gray;">n°72836273838</p>
@@ -222,7 +294,7 @@ function closeNav() {
 	<ul class="navbar-nav mr-auto">
 	
 	  <li class="nav-item active">
-		<a class="nav-link" href="#"><p style="color:#347780">Mlle COTÉ CLAUDINE</p><p style="color:#ffffff;font-weight:400;">INITIAL VALEUR PREVOYANCE</p><p style="color:#ffffff;font-weight:400;">Capital garanti : 8000€</p><span class="sr-only">(current)</span></a>
+		<a class="nav-link" href="#"><p style="color:#347780">Mr Fernàndez Xavier Eric</p><p style="color:#ffffff;font-weight:400;">INITIAL VALEUR PREVOYANCE</p><p style="color:#ffffff;font-weight:400;">Capital garanti : 8000€</p><span class="sr-only">(current)</span></a>
 	  </li>
 	  
 	</ul>
@@ -263,7 +335,7 @@ function closeNav() {
 <br />
 <div class="menudown">
   <a href="#home" onclick="alert()"><i class='fas fa-money-check' style='font-size:12px;color:#fff'></i><br />EDITER UN <br/>RIB</a>
-  <a href="#news" onclick="alert()"><i class='far fa-credit-card' style='font-size:12px;color:#fff'></i><br/>GERER <br/>MA CARTE</a>
+  <a href="#home" onclick="alert()" ><i class='far fa-credit-card' style='font-size:12px;color:#fff'></i><br/>GERER <br/>MA CARTE</a>
   </div>
 	</body>
 </html>
